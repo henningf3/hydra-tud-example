@@ -20,4 +20,8 @@
     caption: [Second order second kind QHCs with $z_2=0.5$ (top), $z_2=1.0$ (mid) and  $z_2=1.5$ (bottom)],
   ) <fig:example_image>
   #lorem(1000)
+  $
+    S_11 = (a ^ 2 - b ^ 2) / ( c_1 * d_"hallo")
+  $ <eq:test_equation>
+  @eq:test_equation, it was stated that ... .
 ]
