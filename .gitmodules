@@ -1,0 +1,3 @@
+[submodule "hydra-tud"]
+	path = hydra-tud
+	url = git@github.com:henningf3/hydra-tud
