@@ -22,9 +22,16 @@ deps:
 
 # Update submodule(s) to the latest upstream commit
 update-deps:
-	@echo "Updating / initializing submodule(s) to the latest upstream commit..."
 	@if command -v git >/dev/null 2>&1 && [ -d .git ] && [ -f .gitmodules ]; then \
+		echo "Updating / initializing submodule(s) to the latest upstream commit..."; \
 		git submodule update --init --recursive --remote "$(REQUIREMENTS_SUBMODULE)"; \
+		git add "$(REQUIREMENTS_SUBMODULE)"; \
+        if git diff --cached --quiet; then \
+            echo "No submodule updates to commit."; \
+        else \
+            git commit -m "Update $(REQUIREMENTS_SUBMODULE) submodule to latest commit"; \
+            echo "Committed submodule update."; \
+        fi \
 	else \
 		echo "Skipping updating / initializing submodule(s). No Repo or 'git' available."; \
 	fi
