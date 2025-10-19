@@ -26,6 +26,8 @@ Download the installer from [Typst releases](https://github.com/typst/typst/rele
 
 ### Compilation
 
+#### If you have GNU make available on your system
+
 To compile the document to PDF:
 
 ```bash
@@ -41,6 +43,32 @@ make watch
 ```
 
 This will automatically recompile the document whenever you save changes.
+
+#### If you do not have GNU make available on your system
+
+Once upon local project setup, update / init submodule(s) to the recorded commit from superproject:
+
+```bash
+git submodule update --init --recursive hydra-tud
+```
+
+Then it is possible to compile the document using:
+
+```bash
+typst compile main.typ
+```
+
+For continuous compilation perform:
+
+```bash
+typst watch main.typ
+```
+
+To update / init submodule(s) to the latest recorded upstream commit do:
+
+```bash
+git submodule update --init --recursive --remote hydra-tud
+```
 
 ## Author
 
