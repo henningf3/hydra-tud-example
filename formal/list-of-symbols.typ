@@ -1,6 +1,6 @@
 #import "../symbols.typ": *
 
-#let fo_sy() = [
+#let cont() = [
   = List of Symbols <ch:list-of-symbols>
 
   == Latin Symbols <sec:latin-symbols>

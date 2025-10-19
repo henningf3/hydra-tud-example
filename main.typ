@@ -21,31 +21,31 @@
 
 #show: tud-preamble
 
-#import "formal/task.typ": fo_ta
-#fo_ta()
+#import "formal/task.typ": cont
+#cont()
 
-#import "formal/soa.typ": fo_au
-#fo_au()
+#import "formal/soa.typ": cont
+#cont()
 
-#import "formal/abstract.typ": fo_ab
-#fo_ab()
+#import "formal/abstract.typ": cont
+#cont()
 
 #create-tud-outline()
 
 #abbr.list()
 
-#import "formal/list-of-symbols.typ": fo_sy
-#fo_sy()
+#import "formal/list-of-symbols.typ": cont
+#cont()
 
 
 #show: tud-body
 
-#import "chapter/01_introduction.typ": ch_01
-#ch_01(abbr)
+#import "chapter/01_introduction.typ": cont
+#cont(abbr)
 
 #show: tud-appendix
-#import "appendix/01_electrodynamics.typ": ap_01
-#ap_01(abbr)
+#import "appendix/01_electrodynamics.typ": cont
+#cont(abbr)
 
 #bibliography("bibliography.bib", style: "ieee")
 

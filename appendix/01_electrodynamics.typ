@@ -1,4 +1,4 @@
-#let ap_01(abbr) = [
+#let cont(abbr) = [
   = Electrodynamics <app:electro>
 
   Welcome to the appendix on Electrodynamics.

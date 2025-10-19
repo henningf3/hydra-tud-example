@@ -1,11 +1,11 @@
-#import "../symbols.typ": S11
+#import "../symbols.typ": S11, gain
 
-#let ch_01(abbr) = [
+#let cont(abbr) = [
   = Introduction <ch:intro>
 
   This is an introduction @cite_example[p.136]. This is S-Parameter #S11.
 
-  An example image can be seen in Figure @fig:example_image. This is an abbreviation. #abbr.a[VSWR]. #abbr.a[PSRR]
+  An example image can be seen in Figure @fig:example_image. This is an abbreviation. #abbr.a[VSWR]. #abbr.a[PSRR]. 
 
   == Subsection
 
@@ -24,4 +24,9 @@
     S_11 = (a ^ 2 - b ^ 2) / ( c_1 * d_"hallo")
   $ <eq:test_equation>
   @eq:test_equation, it was stated that ... .
+  $
+  #gain
+$
 ]
+
+
