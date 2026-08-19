@@ -1,7 +1,17 @@
 #import "hydra-tud/style.typ": tud-doc, tud-preamble, tud-body, tud-appendix, create-tud-outline
-#import "@preview/abbr:0.2.3"
+#import "@preview/abbr:0.3.1"
 
-#abbr.load("abbreviations.csv", delimiter: ",")
+// Styling
+#let abbr_style(body) = {
+  body
+}
+#abbr.config(style: abbr_style)
+#abbr.load("./abbreviations.csv", delimiter: ",")
+
+#show figure: set block(breakable: true)
+
+// Set to true if compilation for print is desired
+#let print_compile = false
 
 #show: tud-doc.with(
   title: "My Thesis",
@@ -17,39 +27,23 @@
     (name: "Dr. Foo", email: "foo@uni.de"),
   ),
   date: datetime(year: 2025, month: 10, day: 1),
+  print_compile: print_compile
 )
 
-#show: tud-preamble
-
-#import "formal/task.typ": cont
-#cont()
-
-#import "formal/soa.typ": cont
-#cont()
-
-#import "formal/abstract.typ": cont
-#cont()
-
+#show: tud-preamble.with(print_compile: print_compile)
+#include "formal/task.typ"
+#include "formal/soa.typ"
+#include "formal/abstract.typ"
 #create-tud-outline()
-
 #abbr.list()
-
-#import "formal/list-of-symbols.typ": cont
-#cont()
+#include "formal/list-of-symbols.typ"
 
 
-#show: tud-body
-
-#import "chapter/01_introduction.typ": cont
-#cont(abbr)
+#show: tud-body.with(print_compile: print_compile)
+#include "chapter/01_introduction.typ"
 
 #show: tud-appendix
-#import "appendix/01_electrodynamics.typ": cont
-#cont(abbr)
-
+#include "appendix/01_electrodynamics.typ"
 #bibliography("bibliography.bib", style: "ieee")
-
 // Add more Lists if needed
 #outline(title: "List of Figures", target: figure.where(kind: image))
-
-
