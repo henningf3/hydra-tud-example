@@ -30,8 +30,7 @@
   print_compile: print_compile
 )
 
-#show: tud-preamble
-
+#show: tud-preamble.with(print_compile: print_compile)
 #include "formal/task.typ"
 #include "formal/soa.typ"
 #include "formal/abstract.typ"
@@ -41,8 +40,7 @@
 
 #include "formal/list-of-symbols.typ"
 
-#show: tud-body
-
+#show: tud-body.with(print_compile: print_compile)
 #include "chapter/01_introduction.typ"
 
 #show: tud-appendix
