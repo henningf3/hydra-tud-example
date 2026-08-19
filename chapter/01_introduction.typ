@@ -1,7 +1,5 @@
 #import "../symbols.typ": S11, gain
 #import "@preview/abbr:0.3.1"
-#abbr.load("../abbreviations.csv", delimiter: ",")
-
 
 = Introduction <ch:intro>
 
@@ -10,6 +8,7 @@ This is an introduction @cite_example[p.136]. This is S-Parameter #S11.
 An example image can be seen in Figure @fig:example_image. This is an abbreviation. #abbr.a[VSWR]. #abbr.a[PSRR].
 
 == Subsection
+Hello there!
 
 === Subsubsection
 #lorem(1000)

@@ -30,20 +30,25 @@
   print_compile: print_compile
 )
 
-#show: tud-preamble.with(print_compile: print_compile)
+#show: tud-preamble
+
 #include "formal/task.typ"
 #include "formal/soa.typ"
 #include "formal/abstract.typ"
+
 #create-tud-outline()
 #abbr.list()
+
 #include "formal/list-of-symbols.typ"
 
+#show: tud-body
 
-#show: tud-body.with(print_compile: print_compile)
 #include "chapter/01_introduction.typ"
 
 #show: tud-appendix
 #include "appendix/01_electrodynamics.typ"
+
+
 #bibliography("bibliography.bib", style: "ieee")
 // Add more Lists if needed
 #outline(title: "List of Figures", target: figure.where(kind: image))

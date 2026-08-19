@@ -1,4 +1,4 @@
-#import "@preview/unify:0.7.1"
+#import "@preview/unify:0.8.1"
 
 #let qty(num, unit) = unify.qty(num, unit, thousandsep: "")  // get rid of annoying space
 
