@@ -70,8 +70,7 @@ To update / init submodule(s) to the latest recorded upstream commit do:
 git submodule update --init --recursive --remote hydra-tud
 ```
 
-## Author
+## Authors
 
+[Tristan Krause](https://github.com/devfix)
 [Henning Dierks](https://github.com/henningf3)
-
-
